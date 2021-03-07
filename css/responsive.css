@@ -1,0 +1,491 @@
+#mobile-nav {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, .9);
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    overflow-y: hidden;
+}
+
+#mobile-nav-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#mobile-nav-open-btn {
+    font-size: 30px;
+    color: #333333;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 6px;
+    /* hide mobile nav open btn */
+    display: none;
+}
+
+#mobile-nav-close-btn {
+    font-family: "Raleway", sans-serif;
+    font-size: 70px;
+    color: #212226;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    top: -9px;
+    right: 13px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#mobile-nav a {
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    color: #212226;
+    font-weight: 400;
+    text-transform: uppercase;
+    /*    display: inline;*/
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+#mobile-nav #button a {
+    color: #ffffff;
+    display: inline;
+}
+
+#mobile-nav #reviewer a {
+    display: inline;
+}
+
+@media (max-width: 1276px) {
+    #mobile-nav-open-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    #mobile-nav-open-btn {
+        display: block;
+    }
+
+    .logo-wrapper .logo img {
+        height: 70%;
+        width: 70%;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .form-1 label {
+        font-size: 12px;
+    }
+
+    .form-1 input {
+        width: 80%;
+        height: 90%;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        width: 80%;
+        height: 90%;
+    }
+
+    .form-group .questions {
+        width: 80%;
+        height: 100px;
+    }
+
+    .form-2 .sell-1 {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .form-2 .sell-price {
+        width: 80%;
+        height: 90%;
+    }
+
+    .form-1 .phone {
+        width: 50%;
+    }
+
+    .form-1 select {
+        width: 20%;
+        height: 50%;
+    }
+
+    .form-1 #number {
+        width: 80%;
+    }
+
+    .footer-para {
+        font-size: 15px;
+    }
+
+    .dashboard h1 {
+        font-size: 25px;
+    }
+
+    .dashboard a {
+        height: 30px;
+        line-height: 15px;
+        font-size: 15px;
+        width: 100px;
+        margin-top: 15px;
+    }
+
+    .my-earning-1 {
+        height: 50px;
+        width: 150px;
+    }
+
+    .my-earning-1 img {
+        height: 50%;
+        width: 20%;
+        margin-top: 5px;
+    }
+
+    .my-earning-1 h3 {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .my-earning-2 {
+        height: 50px;
+        width: 200px;
+    }
+
+    .my-earning-2 h3 {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+    .my-earning-2 p {
+        font-size: 10px;
+        /*        margin-bottom: 5px;*/
+        line-height: 10px;
+    }
+
+    .progress-notes h3 {
+        padding-top: 10px;
+    }
+
+    .table {
+        padding-top: 10px;
+    }
+
+    .has-search input {
+        width: 50%;
+        height: 50%;
+    }
+
+    .has-search a {
+        font-size: 12px;
+        color: #fff;
+        height: 30px;
+        text-transform: uppercase;
+        line-height: 3px;
+    }
+
+    .container {
+        width: 290px;
+        height: 350px;
+        background-color: #f9f9f9;
+    }
+
+    .notes-image {
+        margin-top: 20px;
+    }
+
+    .notes-content {
+        border: 1px solid #d1d1d1;
+        width: 300px;
+        height: 310px;
+    }
+
+    .notes-content h4 {
+        margin: 30px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 15px;
+        color: #6255a5;
+    }
+
+    .add-details {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .select .select-type {
+        width: 150px;
+        height: 25px;
+        border-radius: 3px;
+    }
+
+    .has-search .form-control {
+        width: 250px;
+        height: 25px;
+        margin-top: 30px;
+    }
+
+    .profile-picture {
+        width: 80%;
+        height: 50%
+    }
+
+    .profile-picture img {
+        margin: 10px 150px 0px 100px;
+    }
+
+    .profile-picture p {
+        margin: 0px 90px;
+        color: #333333;
+        font-size: 10px;
+    }
+
+    .notes-record-1 {
+        margin-top: 10px;
+    }
+
+    .notes-record-2 {
+        margin-top: 10px;
+    }
+
+    ul.record li {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #333333;
+    }
+
+    ul.record-1 li {
+        text-align: right;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 30px;
+        color: #6255a5;
+    }
+
+    .customer {
+        margin-top: 20px;
+        width: 300px;
+        height: 750px;
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+    }
+
+    .footer-para {
+        margin: 60px 5px;
+        font-size: 13px;
+    }
+
+    .faq-1 {
+        width: 350px;
+        height: 125px;
+        border: 1px solid #d1d1d1;
+        margin-top: 30px;
+    }
+
+    .faq-1 h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333333;
+    }
+
+    .faq-1 p {
+        font-size: 10px;
+        line-height: 15px;
+        color: #333333;
+        font-weight: 400;
+    }
+
+    .faq-2 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-2 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .faq-3 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-3 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .faq-4 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-4 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .faq-5 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-5 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .faq-6 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-6 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .faq-7 {
+        margin-top: 15px;
+        width: 350px;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+
+    .faq-7 h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .img {
+        margin: 0 2px;
+    }
+
+    #heading h1 {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: Bold(700);
+        line-height: 25px;
+        text-align: left;
+    }
+
+    .image-border {
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+        margin: 50px 120px;
+        border-radius: 100px;
+    }
+
+    .work h1 {
+        font-family: 'Open Sans';
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 38px;
+        color: #6255a5;
+    }
+
+    .download-left .head-3 h3 {
+        line-height: 25px;
+    }
+
+    .download-button {
+        margin-top: 20px;
+        margin-left: 80px;
+        width: 172px;
+        height: 30px;
+        border-radius: 3px;
+        font-size: 18px;
+        background-color: #6255a5;
+        line-height: 30px;
+    }
+
+    .testimonials h1 {
+        margin-top: 200px;
+        text-align: left;
+        color: #6255a5;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .customers {
+        /*        margin: 20px;*/
+        width: 250px;
+        height: 400px;
+        border-radius: 3px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .customer-img {
+        margin-top: 25px;
+    }
+
+    .customers h2 {
+        margin-top: 20px;
+        color: #6255a5;
+        font-size: 20px;
+    }
+
+    .table {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #d1d1d1;
+        margin-left: 20px;
+    }
+
+    .table thead tr th {
+        height: 40px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: 10px;
+    }
+
+    .table tbody tr td {
+        font-size: 13px;
+        height: 30px;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    .table tbody tr:hover {
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+}

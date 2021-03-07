@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Manage Country</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/managecountry.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="site-header">
+            <div class="header-wrapper">
+                <div class="logo-wrapper col-md-offset-1 col-md-3">
+                    <span id="mobile-nav-open-btn">&#9776;</span>
+
+                    <a href="../homepage.html" title="Site Logo" class="logo">
+                        <img src="../img/home/logo.png">
+                    </a>
+                </div>
+                <div class="navigation-wrapper collapse navbar-collapse col-md-8" id="navbarCollapse">
+                    <nav class="main-nav">
+                        <ul class="menu-navigation">
+                            <li>
+                                <a href="dashboard.html">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="notedetailspage.html">Notes</a>
+                            </li>
+                            <li class="active">
+                                <a href="members.html">Members</a>
+                            </li>
+                            <li>
+                                <a href="#">Reports</a>
+                            </li>
+                            <li>
+                                <a href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="../img/reviewer-1.png" class="img-responsive"></a>
+                            </li>
+                            <li id="button">
+                                <a href="login.html" class="btn login-button">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="col-sm-12">
+                <!--                 Mobile Menu Open Button -->
+                <div id="mobile-nav-content">
+                    <span id="mobile-nav-close-btn">&times;</span>
+                    <ul class="nav">
+                        <li>
+                            <a class="smooth-scroll" href="#">Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#">Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#">Members</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#">Reports</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#"><img src="../img/reviewer-1.png" class="img-responsive"></a>
+                        </li>
+                        <li id="button">
+                            <a class="smooth-scroll" href="#" class="btn login-button">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="heading col-md-offset-1 col-md-11">
+        <h1>Manage Country</h1>
+    </div>
+
+    <div class="seller col-md-offset-1 col-md-5">
+        <a href="#" class="btn add-admin">Add Country</a>
+    </div>
+    <div class="form-group has-search col-md-6">
+        <input type="text" class="form-control col-md-offset-3 col-md-4  col-xs-offset-1 col-xs-6" placeholder="Search">
+        <a href="#" class="btn btn-general col-md-2 col-xs-3">Search</a>
+    </div>
+
+    <div class="table-responsive-lg col-md-offset-1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sr No.</th>
+                    <th scope="col">Country Name</th>
+                    <th scope="col">Country Code</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Added By</th>
+                    <th scope="col">Active</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>India</td>
+                    <td>11</td>
+                    <td>09-10-2020, 10:10</td>
+                    <td>Khyati Patel</td>
+                    <td>Yes</td>
+                    <td><img src="../img/edit.png"><img src="../img/delete.png"></td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Australia</td>
+                    <td>24</td>
+                    <td>10-10-2020, 12:30</td>
+                    <td>Rahul Shah</td>
+                    <td>Yes</td>
+                    <td><img src="../img/edit.png"><img src="../img/delete.png"></td>
+                </tr>
+                <tr class="box-shadow">
+                    <td scope="row">3</td>
+                    <td>USA</td>
+                    <td>04</td>
+                    <td>11-10-2020, 01:00</td>
+                    <td>Suman Trivedi</td>
+                    <td>No</td>
+                    <td><img src="../img/edit.png"><img src="../img/delete.png"></td>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>United Kingdom</td>
+                    <td>12</td>
+                    <td>12-10-2020, 10:10</td>
+                    <td>Raj Malhotra</td>
+                    <td>Yes</td>
+                    <td><img src="../img/edit.png"><img src="../img/delete.png"></td>
+                </tr>
+                <tr>
+                    <td scope="row">5</td>
+                    <td>Canada</td>
+                    <td>13</td>
+                    <td>13-10-2020, 11:25</td>
+                    <td>Niya Patel</td>
+                    <td>No</td>
+                    <td><img src="../img/edit.png"><img src="../img/delete.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pagination-content">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-lg">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&lsaquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link main" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&rsaquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="footer">
+        <div class="col-md-offset-1 col-md-5 col-xs-6">
+            <p>Version:1.1.24</p>
+        </div>
+        <div class="col-md-6 col-xs-6">
+            <p class="footer-para pull-right">Copyright &copy; Tatvasoft All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../css/bootstrap.min.css"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body></html>

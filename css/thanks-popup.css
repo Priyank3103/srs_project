@@ -1,0 +1,37 @@
+.heading{
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333333;  
+}
+
+#head i{
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    color: #6255a5;
+    margin-bottom: 15px;
+}
+
+#head-2{
+    font-family: "Open Sans";
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#last{
+    margin-bottom: 0px;
+}
+
+#model-content{
+    margin: 50px 20px 30px 20px;
+}
+
+#contect-pera{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
