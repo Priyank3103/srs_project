@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Note Details</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/notedetailspage.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/thanks-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="site-header">
+            <div class="header-wrapper">
+                <div class="logo-wrapper col-md-offset-1 col-md-3">
+                    <span id="mobile-nav-open-btn">&#9776;</span>
+
+                    <a href="homepage.html" title="Site Logo" class="logo">
+                        <img src="img/home/logo.png">
+                    </a>
+                </div>
+                <div class="navigation-wrapper collapse navbar-collapse col-md-8" id="navbarCollapse">
+                    <nav class="main-nav">
+                        <ul class="menu-navigation">
+                            <li>
+                                <a href="searchpage.html">Search Notes</a>
+                            </li>
+                            <li>
+                                <a href="mysoldnotes.html">Sell Your Notes</a>
+                            </li>
+                            <li>
+                                <a href="buyersrequest.html">Buyer Requests</a>
+                            </li>
+                            <li>
+                                <a href="faqpage.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="img/reviewer-1.png" class="img-responsive"></a>
+                            </li>
+                            <li id="button">
+                                <a href="#" class="btn login-button">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="col-sm-12">
+                <!--                 Mobile Menu Open Button -->
+                <div id="mobile-nav-content">
+                    <span id="mobile-nav-close-btn">&times;</span>
+                    <ul class="nav">
+                        <li>
+                            <a class="smooth-scroll" href="searchpage.html">Search Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="mysoldnotes.html">Sell Your Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="buyersrequest.html">Buyer Requests</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="faqpage.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#"><img src="img/reviewer-1.png" class="img-responsive"></a>
+                        </li>
+                        <li id="button">
+                            <a class="smooth-scroll" href="login.html" class="btn login-button">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="notes-details">
+
+        <div class="col-md-offset-1 col-md-5">
+            <h4>Notes Details</h4>
+            <div class="notes-image col-md-4">
+                <img src="img/computer-science.png" class="img-responsive">
+            </div>
+            <div class="computer-science">
+                <h1>Computer Science</h1>
+                <h5>Science</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam eaque cum earum dolore incidunt omnis. Impedit laboriosam eaque cum earum dolore incidunt omnis.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="#" class="btn download-button" data-target="#myModal" data-toggle="modal">Download / $15</a>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"><img src="img/close.png" alt="closeimage"></span>
+                            </button>
+                        </div>
+                        <div id="model-content">
+                            <div id="head" class="text-center">
+                                <i class="fa fa-check-circle"></i>
+                            </div>
+                            <h3 class="text-center" id="head-2">Thank you for purchasing</h3>
+                            <h4 class="heading">Dear Smith,</h4>
+                            <div class="note-description">
+                                <p>As this is paid notes-you need to pay to seller Rahil shah offline.We will send him an
+                                    email that you want to download this note.He may contact you further for payment process
+                                    completion.</p>
+
+                                <p>In case,you have urgency,<br>Please contect us on +911234567890.</p>
+
+                                <p>Once he recieves the payment and acknowldge us - selected notes you can see over my
+                                    downloads tab for download.</p>
+
+                                <p id="last">Have a good day.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+            <div class="notes-record-1 col-md-offset-1 col-md-4 col-xs-6">
+                <ul class="record">
+                    <li>Institution:</li>
+                    <li>Country:</li>
+                    <li>Course Name:</li>
+                    <li>Course Code:</li>
+                    <li>Professor:</li>
+                    <li>Number of Pages:</li>
+                    <li>Approved Date:</li>
+                    <li>Rating:</li>
+                </ul>
+            </div>
+            <div class="notes-record-2 col-md-4">
+                <ul class="record record-1">
+                    <li>University of California</li>
+                    <li>United State</li>
+                    <li>Computer Engineering</li>
+                    <li>248705</li>
+                    <li>Mr. Richard Brown</li>
+                    <li>277</li>
+                    <li>November 25 2020</li>
+                    <li class="rate"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star-white.png" class="star">100 reviews</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="notes-preview col-md-offset-1 col-md-6">
+            <h4>Notes Preview</h4>
+            <div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+                <div class="responsive-wrapper 
+     responsive-wrapper-padding-bottom-90pct" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                    <iframe src="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf">
+                        <p style="font-size: 110%;"><em><strong>ERROR: </strong>
+                                An &#105;frame should be displayed here but your browser version does not support &#105;frames.</em> Please update your browser to its most recent version and try again, or access the file <a href="http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf">with this link.</a></p>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="customer-review col-md-5">
+            <h4>Customer Reviews</h4>
+            <div class="customer">
+                <div class="customer-1 col-md-2">
+                    <img src="img/reviewer-1.png" class="img-responsive">
+                </div>
+                <h3>Richard Brown</h3>
+                <img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star-white.png" class="star">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam eaque cum earum dolore incidunt omnis.</p>
+                <hr>
+
+                <div class="customer-1 col-md-2">
+                    <img src="img/reviewer-2.png" class="img-responsive">
+                </div>
+                <h3>Alice Ortiaz</h3>
+                <img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star-white.png" class="star">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam eaque cum earum dolore incidunt omnis.</p>
+                <hr>
+
+                <div class="customer-1 col-md-2">
+                    <img src="img/reviewer-3.png" class="img-responsive">
+                </div>
+                <h3>Sara Passmore</h3>
+                <img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star.png" class="star"><img src="img/star-white.png" class="star">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam eaque cum earum dolore incidunt omnis.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="col-md-6 col-xs-6">
+            <p class="footer-para">Copyright &copy; Tatvasoft All rights reserved.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-3 col-xs-6">
+            <ul class="social-list">
+                <li><a href="#"><img src="img/home/facebook.png" class="fav"></a></li>
+                <li><a href="#"><img src="img/home/linkedin.png" class="fav"></a></li>
+                <li><a href="#"><img src="img/home/twitter.png" class="fav"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="css/bootstrap.min.css"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body></html>
