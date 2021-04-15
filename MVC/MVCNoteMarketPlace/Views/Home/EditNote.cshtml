@@ -1,0 +1,285 @@
+﻿@model MVCNoteMarketPlace.Models.Addnote
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Note Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/addnotespage.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="site-header">
+            <div class="header-wrapper">
+                <div class="logo-wrapper col-md-offset-1 col-md-3">
+                    <span id="mobile-nav-open-btn">&#9776;</span>
+
+                    <a href="homepage.html" title="Site Logo" class="logo">
+                        <img src="/img/home/logo.png">
+                    </a>
+                </div>
+                <div class="navigation-wrapper collapse navbar-collapse col-md-8" id="navbarCollapse">
+                    <nav class="main-nav">
+                        <ul class="menu-navigation">
+                            <li>
+                                <a href="searchpage.html">Search Notes</a>
+                            </li>
+                            <li>
+                                <a href="mysoldnotes.html">Sell Your Notes</a>
+                            </li>
+                            <li>
+                                <a href="buyersrequest.html">Buyer Requests</a>
+                            </li>
+                            <li>
+                                <a href="faqpage.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/reviewer-1.png" class="img-responsive"></a>
+                            </li>
+                            <li id="button">
+                                <a href="#" class="btn login-button">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="col-sm-12">
+                <!--                 Mobile Menu Open Button -->
+                <div id="mobile-nav-content">
+                    <span id="mobile-nav-close-btn">&times;</span>
+                    <ul class="nav">
+                        <li>
+                            <a class="smooth-scroll" href="searchpage.html">Search Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="mysoldnotes.html">Sell Your Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="buyersrequest.html">Buyer Requests</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="faqpage.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#"><img src="/img/reviewer-1.png" class="img-responsive"></a>
+                        </li>
+                        <li id="button">
+                            <a class="smooth-scroll" href="login.html" class="btn login-button">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="heading">
+            <h1>Add Notes</h1>
+        </div>
+
+    </div>
+
+    @using (Html.BeginForm("EditNote", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.HiddenFor(model=>model.SellerNote.ID)
+        @Html.HiddenFor(model=>model.SellerNotesAttachement.NoteID)
+        
+        <div class="head-1 col-md-offset-1 col-md-10">
+            <h1>Basic Note Details</h1>
+        </div>
+
+
+        <div class="form-1 col-md-offset-1 col-md-5">
+
+            @Html.LabelFor(model => model.SellerNote.Title, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.Title, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your notebook title." } })
+            @Html.LabelFor(model => model.SellerNote.DisplayPicture, htmlAttributes: new { @class = "col-md-12" })
+            <div class="profile-picture col-md-12">
+                <img src="/img/upload-file.png" id="UserFile-1">
+                @Html.TextBoxFor(model => model.SellerNote.DisplayFile, new { type = "file", @class = "hidden file", id = "BrowseFile-1", name = "DisplayFile" })
+                <p>Upload a picture</p>
+            </div>
+
+            @Html.LabelFor(model => model.SellerNote.NoteType, htmlAttributes: new { @class = "col-md-12 col-xs-12" })
+            @Html.DropDownListFor(model => model.SellerNote.NoteType, ViewBag.Notetype as SelectList, "Select Note Type", new { @class = "col-md-3 col-xs-12", @id = "number" })
+        </div>
+
+        <div class="form-1 col-md-6">
+            @Html.LabelFor(model => model.SellerNote.Category, htmlAttributes: new { @class = "col-md-12" })
+            @Html.DropDownListFor(model => model.SellerNote.Category, ViewBag.Notecategory as SelectList, "Select Note Category", new { @class = "col-md-3", @id = "number" })
+            @Html.LabelFor(model => model.SellerNote.UploadPicture, htmlAttributes: new { @class = "col-md-12" })
+            <div class="profile-picture col-md-12">
+                <i class="glyphicon glyphicon-remove" style="cursor: pointer;"></i>
+                @*<input type="file" class="hidden file" id="BrowseFile" name="UserImageFile" />*@
+                @Html.TextBoxFor(model => model.SellerNotesAttachement.UserImageFile, new { type = "file", @class = "hidden file", id = "BrowseFile", name = "UserImageFile" })
+                <img src="/img/upload-file.png" id="UserFile">
+                <p>Upload a picture</p>
+            </div>
+            @Html.LabelFor(model => model.SellerNote.NumberofPages, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.NumberofPages, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter number of note pages" } })
+
+        </div>
+
+        <div class="form-1 col-md-offset-1 col-md-10">
+            @Html.LabelFor(model => model.SellerNote.Description, htmlAttributes: new { @class = "col-md-12" })
+            <div class="description">
+                @Html.EditorFor(model => model.SellerNote.Description, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your description" } })
+            </div>
+        </div>
+
+        <div class="head-1 col-md-offset-1 col-md-10">
+            <h1>Institution Information</h1>
+        </div>
+
+        <div class="form-1 col-md-offset-1 col-md-5">
+            @Html.LabelFor(model => model.SellerNote.Country, htmlAttributes: new { @class = "col-md-12" })
+            @Html.DropDownListFor(model => model.SellerNote.Country, ViewBag.country as SelectList, "Select Country", new { @class = "col-md-3 col-xs-12", @id = "number" })
+        </div>
+
+        <div class="form-1 col-md-6">
+            @Html.LabelFor(model => model.SellerNote.UniversityName, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.UniversityName, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your university name." } })
+        </div>
+
+        <div class="head-1 col-md-offset-1 col-md-10">
+            <h1>Course Details</h1>
+        </div>
+
+        <div class="form-1 col-md-offset-1 col-md-5">
+            @Html.LabelFor(model => model.SellerNote.Course, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.Course, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your course name." } })
+            @Html.LabelFor(model => model.SellerNote.Professor, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.Professor, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your professor name." } })
+        </div>
+
+        <div class="form-1 col-md-6">
+            @Html.LabelFor(model => model.SellerNote.CourseCode, htmlAttributes: new { @class = "col-md-12" })
+            @Html.EditorFor(model => model.SellerNote.CourseCode, new { htmlAttributes = new { @class = "col-md-12", @placeholder = "Enter your course code." } })
+        </div>
+
+        <div class="head-1 col-md-offset-1 col-md-11">
+            <h1>Selling Information</h1>
+        </div>
+
+
+        <div class="form-2 col-md-offset-1 col-md-5">
+            @Html.LabelFor(model => model.SellerNote.SellFor, htmlAttributes: new { @class = "sell col-md-12 col-xs-12" })
+            <div class="form-check form-check-inline">
+                @Html.RadioButtonFor(model => model.SellerNote.IsPaid, "false", new { @class = "form-check-input", @id = "inlineRadio1" })
+                <label for="free" class="form-check-label">Free</label>
+            </div>
+            <div class="form-check form-check-inline">
+                @Html.RadioButtonFor(model => model.SellerNote.IsPaid, "true", new { @class = "form-check-input", @id = "inlineRadio1" })
+                <label for="paid" class="form-check-label">Paid</label>
+            </div>
+            @Html.LabelFor(model => model.SellerNote.SellingPrice, htmlAttributes: new { @class = "sell-1 col-md-12 col-xs-12" })
+            @Html.EditorFor(model => model.SellerNote.SellingPrice, new { htmlAttributes = new { @class = "sell-price col-md-12 col-xs-12", @placeholder = "Enter your sell price." } })
+            <div class="col-md-3">
+                <input type="submit" value="Save" class="btn btn-lg btn-block submit-btn">
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Publish" class="btn btn-lg btn-block submit-btn">
+            </div>
+        </div>
+
+        <div class="form-1 col-md-6">
+            <label class="col-md-12">Note Preview</label>
+            <div class="profile-picture col-md-12">
+                <img src="../img/upload-file.png">
+                <p>Upload a picture</p>
+            </div>
+        </div>
+    }
+
+    <div class="footer col-md-12">
+        <div class="col-md-6 col-xs-6">
+            <p class="footer-para">Copyright &copy; Tatvasoft All rights reserved.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-3 col-xs-6">
+            <ul class="social-list">
+                <li><a href="#"><img src="/img/home/facebook.png" class="fav"></a></li>
+                <li><a href="#"><img src="/img/home/linkedin.png" class="fav"></a></li>
+                <li><a href="#"><img src="/img/home/twitter.png" class="fav"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/css/bootstrap.min.css"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+
+    <script>
+
+        $("#UserFile").click(function () {
+            $("#BrowseFile").trigger("click");
+        });
+
+        $("#UserFile-1").click(function () {
+            $("#BrowseFile-1").trigger("click");
+        });
+
+        $("#BrowseFile").change(function () {
+
+            if (this.files && this.files[0]) {
+                var fileReader = new FileReader();
+                fileReader.readAsDataURL(this.files[0]);
+
+                fileReader.onload = function (x) {
+                    $("#UserFile").attr('src', x.target.result);
+                }
+            }
+
+        });
+
+        $("#BrowseFile-1").change(function () {
+
+            if (this.files && this.files[0]) {
+                var fileReader = new FileReader();
+                fileReader.readAsDataURL(this.files[0]);
+
+                fileReader.onload = function (x) {
+                    $("#UserFile-1").attr('src', x.target.result);
+                }
+            }
+
+        });
+
+        $(".glyphicon").click(function () {
+
+            $("#UserFile").attr('src', "/img/upload-file.png");
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+

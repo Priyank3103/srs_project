@@ -1,0 +1,155 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/contactus.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="site-header">
+            <div class="header-wrapper">
+                <div class="logo-wrapper col-md-offset-1 col-md-1 col-sm-2">
+                    <span id="mobile-nav-open-btn">&#9776;</span>
+
+                    <a href="homepage.html" title="Site Logo" class="logo">
+                        <img src="/img/home/logo.png">
+                    </a>
+                </div>
+                <div class="navigation-wrapper collapse navbar-collapse col-md-10 col-sm-10" id="navbarCollapse">
+                    <nav class="main-nav">
+                        <ul class="menu-navigation">
+                            <li>
+                                <a href="searchpage.html">Search Notes</a>
+                            </li>
+                            <li>
+                                <a href="mysoldnotes.html">Sell Your Notes</a>
+                            </li>
+                            <li>
+                                <a href="buyersrequest.html">Buyer Requests</a>
+                            </li>
+                            <li>
+                                <a href="faqpage.html">FAQ</a>
+                            </li>
+                            <li class="active">
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="/img/reviewer-1.png" class="img-responsive"></a>
+                            </li>
+                            <li id="button">
+                                <a href="login.html" class="btn login-button">Login</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-nav" class="col-sm-12">
+                <!--                 Mobile Menu Open Button -->
+                <div id="mobile-nav-content">
+                    <span id="mobile-nav-close-btn">&times;</span>
+                    <ul class="nav">
+                        <li>
+                            <a class="smooth-scroll" href="searchpage.html">Search Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="mysoldnotes.html">Sell Your Notes</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="buyersrequest.html">Buyer Requests</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="faqpage.html">FAQ</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a class="smooth-scroll" href="#"><img src="/img/reviewer-1.png" class="img-responsive"></a>
+                        </li>
+                        <li id="button">
+                            <a class="smooth-scroll" href="login.html" class="btn login-button">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="heading">
+            <h1>Contact Us</h1>
+        </div>
+    </div>
+
+
+    <div class="head-1 col-md-offset-1 col-md-11">
+        <h1>Get In Touch</h1>
+        <p>Let us know how to get back to you</p>
+    </div>
+
+    @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+    {
+        <div class="col-md-12">
+            <div class="form-class col-md-offset-1 col-md-5">
+                <div class="form-group">
+                    <label class="full-name">Full Name <sup>*</sup></label>
+                    <input type="text" placeholder="Enter your full name" name="Name">
+                </div>
+                <div class="form-group">
+                    <label class="email-address">Email Address <sup>*</sup></label>
+                    <input type="text" placeholder="Enter your email address" name="Email">
+                </div>
+                <div class="form-group">
+                    <label class="subject col-xs-12">Subject <sup>*</sup></label>
+                    <input type="text" placeholder="Enter your choice subject" name="Subject">
+                </div>
+                <div class="button">
+                    <input type="submit" class="submit-btn btn-lg" value="submit" />
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group col-md-offset-1">
+                    <label class="comments">Commets / Questions <sup>*</sup></label>
+                    <input type="text" placeholder="Comments..." class="questions" name="Comment">
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="footer">
+        <div class="col-md-6 col-xs-6">
+            <p class="footer-para">Copyright &copy; Tatvasoft All rights reserved.</p>
+        </div>
+        <div class="col-md-offset-3 col-md-3 col-xs-6">
+            <ul class="social-list">
+                <li><a href="#"><img src="/img/home/facebook.png" class="fav"></a></li>
+                <li><a href="#"><img src="/img/home/linkedin.png" class="fav"></a></li>
+                <li><a href="#"><img src="/img/home/twitter.png" class="fav"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="css/bootstrap.min.css"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
